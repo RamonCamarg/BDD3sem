@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- header section -->
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+
+        <div class="h-icons">
+            <a href="#"><i class='bx bx-search' ></i></a>
+            <a href="#" id="cart-icon"><i class='bx bx-cart' ></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><span>Bem Vindo</span> para o mundo da pizza saborosa e fresca</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing. <br> Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn">Escolha uma Pizza</a>
+        </div>
+
+        <div class="home-img">
+            <img src="img/home.png" alt="home">
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="container">
+        <div class="main-text">
+            <h2>Ingredientes</h2>
+            <p>Apenas o melhor para você</p>
+        </div>
+
+        <div class="container-box">
+            <div class="c-mainbox" onclick="addToCart('Marguerita', 50.00)">
+                <div class="container-img">
+                    <img src="img/b1.png" alt="box1">
+                </div>
+                <div class="container-text">
+                    <p>Massa Delicada</p>
+                </div>
+            </div>
+
+            <div class="c-mainbox" onclick="addToCart('Montanara', 55.99)">
+                <div class="container-img">
+                    <img src="img/b2.png" alt="box2">
+                </div>
+                <div class="container-text">
+                    <p>Tomates Frescos</p>
+                </div>
+            </div>
+
+            <div class="c-mainbox" onclick="addToCart('Carne', 47.90)">
+                <div class="container-img">
+                    <img src="img/b3.png" alt="box3">
+                </div>
+                <div class="container-text">
+                    <p>Queijo Alpino</p>
+                </div>
+            </div>
+
+            <div class="c-mainbox" onclick="addToCart('Pepperoni', 59.90)">
+                <div class="container-img">
+                    <img src="img/b4.png" alt="box4">
+                </div>
+                <div class="container-text">
+                    <p>Salsicha Italiana</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- about section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/a.png" alt="">
+        </div>
+
+        <div class="about-text">
+            <h2>A Comida Deliciosa<br> Para um Bom Humor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ipsum?<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, dolore pariatur! Enim inventore excepturi laudantium necessitatibus placeat mollitia, incidunt consequatur.</p>
+            <a href="#" class="btn">Escolha uma pizza</a>
+        </div>
+
+    </section>
+
+    <!-- menu section -->
+
+    <section class="menu" id="menu">
+        <div class="main-text">
+            <h2>Pizza mais Popular</h2>
+            <p>Nós selecionamos para você<br> Os sabores mais requintados do mundo</p>
+        </div>
+
+        <div class="menu-content">
+            <div class="row" onclick="addToCart('Marguerita', 50.00)">
+                <img src="img/m1.jpg" alt="main-product1">
+                <div class="menu-text">
+                    <div class="menu-left">
+                        <h4>Marguerita</h4>
+                    </div>
+                    <div class="menu-right">
+                        <h5>R$50,00</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam.</p>
+                <div class="star">
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                </div>
+            </div>
+
+            <div class="row" onclick="addToCart('Montanara', 55.99)">
+                <img src="img/m2.jpg" alt="main-product2">
+                <div class="menu-text">
+                    <div class="menu-left">
+                        <h4>Montanara</h4>
+                    </div>
+                    <div class="menu-right">
+                        <h5>R$55,99</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam.</p>
+                <div class="star">
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                </div>
+            </div>
+
+            <div class="row" onclick="addToCart('Carne', 47.90)">
+                <img src="img/m3.jpg" alt="main-product3">
+                <div class="menu-text">
+                    <div class="menu-left">
+                        <h4>Carne</h4>
+                    </div>
+                    <div class="menu-right">
+                        <h5>R$47,90</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam.</p>
+                <div class="star">
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                </div>
+            </div>
+
+            <div class="row" onclick="addToCart('Pepperoni', 59.90)">
+                <img src="img/m4.jpg" alt="main-product3">
+                <div class="menu-text">
+                    <div class="menu-left">
+                        <h4>Pepperoni</h4>
+                    </div>
+                    <div class="menu-right">
+                        <h5>R$59,90</h5>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magnam.</p>
+                <div class="star">
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                    <a href="#"><i class='bx bxs-star' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Carrinho de Compras -->
+    <div id="cart" class="cart">
+        <h3>Carrinho de Compras</h3> <br>
+        <ul id="cart-items">
+            <!-- Os itens do carrinho serão adicionados aqui dinamicamente -->
+        </ul>
+        <br>
+        <div id="total" class="total">
+            <p>Total: <span id="cart-total">R$ 0.00</span></p> <br>
+            <button onclick="purcheCart()">Comprar</button>
+            <button onclick="clearCart()">Limpar Carrinho</button>
+        </div>
+    </div>
+
+	<!-- contact section -->
+
+		<section class="contact" id="contact">
+			<div class="main-contact">
+				<div class="contact-content">
+					<h4>Serviços</h4>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">Sobre</a></li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#contact">Contato</a></li>
+				</div>
+
+				<div class="contact-content">
+					<h4>Delivery</h4>
+					<li><a href="#home">Uber Eats</a></li>
+					<li><a href="#about">Ifood</a></li>
+					<li><a href="#menu">ChowNow</a></li>
+					<li><a href="#contact">Toast TakeOut</a></li>
+				</div>
+
+				<div class="contact-content">
+					<h4>Contato</h4>
+					<li><a href="#home">Contate-nos</a></li>
+					<li><a href="#about">Centro de Imprensa</a></li>
+					<li><a href="#menu">Carreira</a></li>
+					<li><a href="#contact">Perguntas Frenquentes</a></li>
+				</div>
+
+				<div class="contact-content">
+					<h4>Siga-nos</h4>
+					<li><a href="#home">TikTok</a></li>
+					<li><a href="#about">Twitter</a></li>
+					<li><a href="#menu">Facebook</a></li>
+					<li><a href="#menu">Instagramm</a></li>
+				</div>
+			</div>
+		</section>
+
+		<div class="last-text">
+			<p>© Developed 2023 by Ilya Korobeynikov</p>
+		</div>
+	<!-- scroll top -->
+	<a href="#home" class="scroll-top">
+		<i class='bx bx-up-arrow-alt' ></i>
+	</a>
+
+	<!-- custom scrollreveal link -->
+
+	<script src="https://unpkg.com/scrollreveal"></script>
+	
+	<!-- custom js link -->
+	<script type="text/javascript" src="script.js"></script>
+	
+</body>
+</html>
+
+
